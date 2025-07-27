@@ -1,0 +1,33 @@
+<header class="site-header">
+  <div class="wrapper">
+    <nav class="site-nav">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      
+      <div class="nav-links">
+        <a href="{{ '/' | relative_url }}">
+          {{ site.data.translations[page.lang].home | default: "홈" }}
+        </a>
+        <a href="{{ '/about' | relative_url }}">
+          {{ site.data.translations[page.lang].about | default: "소개" }}
+        </a>
+        
+        <!-- Language toggle -->
+        <div class="language-toggle">
+          {% assign current_lang = page.lang | default: site.default_lang %}
+          {% for lang in site.languages %}
+            {% if lang != current_lang %}
+              <a href="{{ page.url | remove: '/' | prepend: '/' | prepend: lang }}" class="lang-link">
+                {{ lang | upcase }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        
+        <!-- Dark mode toggle -->
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-toggle-icon">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header> 

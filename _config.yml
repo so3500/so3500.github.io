@@ -1,0 +1,62 @@
+# Site settings
+title: "onblog"
+description: "A personal blog built with Jekyll and GitHub Pages"
+baseurl: ""
+url: "https://your-username.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Language settings
+languages: ["ko", "en"]
+default_lang: "ko"
+exclude_from_localization: ["javascript", "images", "css", "assets"]
+
+# Social links
+github_username: your-username
+email: your-email@example.com
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+  - scope:
+      path: ""
+    values:
+      layout: "default" 

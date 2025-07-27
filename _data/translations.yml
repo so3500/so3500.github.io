@@ -1,0 +1,17 @@
+ko:
+  home: "홈"
+  about: "소개"
+  recent_posts: "최근 포스트"
+  no_posts: "아직 포스트가 없습니다."
+  read_more: "더 읽기"
+  tags: "태그"
+  categories: "카테고리"
+
+en:
+  home: "Home"
+  about: "About"
+  recent_posts: "Recent Posts"
+  no_posts: "No posts yet."
+  read_more: "Read more"
+  tags: "Tags"
+  categories: "Categories" 
